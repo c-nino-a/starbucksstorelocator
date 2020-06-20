@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Starbucks Store Locator by Christian Niño Arrieta</title>
+        <link rel="stylesheet" href="style/style.css">
+        <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+        <script src="js/store-data.js"></script>
+    </head>
+    <body onload=onLoad()>
+        <div class="loadscreen">
+            <img class="logo" src="logomain.png"></i>
+        <div id="loader">
+        </div>
+        <div class="loadtext">
+            Brewing...
+        </div>
+    </div>
+        <div id="app" class="hidden">
+            <div id="style-selector-control"  class="map-control">
+                Theme:
+                <select id="style-selector" class="selector-control">
+                    <option value="default">Vanilla</option>
+                    <option value="dark" selected="selected">Dark</option>
+                    <option value="latte">Latte</option>
+                </select>
+            </div>
+            <div class="titlelogo">
+                <img class="logo" src="logomain.png"></i>
+                <div class="title">Store<br>Locator</div>
+            </div>
+            <div class="search-container">
+                <div class="search">
+                    <input id="zip-code-input" class="input" type="text" placeholder="Enter zip">
+                    <i class="fas fa-search" onclick="searchStores()"></i>
+                </div>
+            </div>
+            <div id="map"></div>
+            <div class="stores-list">
+                <div class="stores">
+                </div>
+            </div>
+        </div>
+        <script src="js/index.js"></script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7BZKj9fBVRedqxVHV6tCncgzemRBPl1g&callback=initMap">
+        </script>
+    </body>
+</html>
